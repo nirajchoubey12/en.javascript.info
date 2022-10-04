@@ -51,7 +51,7 @@ For instance, let's try reading and writing to `<iframe>` from another origin:
     try {
       // ...but not to the document inside it
 *!*
-      let doc = iframe.contentDocument; // ERROR
+      let doc = iframe.contentDocument; // returns null due to different origin
 */!*
     } catch(e) {
       alert(e); // Security Error (another origin)
